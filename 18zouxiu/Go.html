@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="touch/zepto.js"></script>
+    <script src="touch/touch.js"></script>
+    <!--<script src="out/jquery.js"></script>-->
+    <link rel="stylesheet" href="out/animate.min.css">
+    <link rel="stylesheet" href="out/swiper-3.3.1.min.css">
+    <script src="out/jquery-1.10.1.min.js"></script>
+    <script src="out/swiper-3.3.1.jquery.min.js"></script>
+    <script src="out/swiper.animate1.0.2.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background-color: #f8f3f7;
+            font-size: 31.25vw;
+            overflow: hidden;
+        }
+        .swiper-container{
+            width: 100%;
+            height: 100%;
+            background-color: #f8f3f7;
+        }
+        .conter{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .conter img:nth-of-type(1){
+            margin-top: .8rem;
+            width: 60%;
+        }
+        .conter img:nth-of-type(2){
+            margin-top: .8rem;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .four span{
+            position: absolute;
+            top: 2.5rem;
+            left: .3rem;
+            color: #e33769;
+            font-size: .24rem;
+            line-height: .24rem;
+        }
+        .fourdian{
+            position: absolute;
+            left: 20%;
+            bottom: 1rem;
+            width: 60%;
+            height: .7rem;
+            background-color: #ec4175;
+            text-align: center;
+            line-height: .7rem;
+            font-size: .26rem;
+            color: white;
+            border-radius: 10px;
+        }
+        .fourdian a{
+            color: white;
+            text-decoration: none;
+        }
+        .dond{
+            width: .3rem;
+            position: absolute;
+            top: .5rem;
+            left: 50%;
+            margin-left: -.15rem;
+            animation-name: move;
+            animation-duration: .2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes move {
+            to{
+                top:.7rem;
+            }
+        }
+        .third span{
+            position: absolute;
+            top: 1rem;
+            left: .85rem;
+            color: #e33769;
+            font-size: .3rem;
+            line-height: .28rem;
+            font-weight: bold;
+        }
+        .third img:nth-of-type(1){
+            position: absolute;
+            top: 2rem;
+            left: 15%;
+            width: 70%;
+        }
+        .third img:nth-of-type(2){
+            position: absolute;
+            top: 3.7rem;
+            left: 25%;
+            width: 50%;
+        }
+        .guoban{
+            width: 100%;
+            height: 40%;
+            background-color: rgba(184,192,12,.7);
+            font-size: .3rem;
+            line-height: .6rem;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .guoban p:nth-of-type(1){
+            margin-top: .7rem;
+        }
+        .guobanxia{
+            width: 100%;
+        }
+        .guobanxia p{
+            width: 100%;
+            font-size: .3rem;
+            line-height: .6rem;
+            color: darkgray;
+        }
+        .guobanxia p:nth-of-type(1){
+            margin-top: 1rem;
+            text-indent: .8rem;
+        }
+        .guobanxia p:nth-of-type(2){
+            text-indent: .2rem;
+        }
+        .two img{
+            width: 90%;
+            position: absolute;
+            left: 10%;
+            top: 5%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="conter">
+    <img src="img/20.jpg" alt="">
+    <img src="img/21.jpg" alt="">
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide one">
+            <div class="guoban">
+                <p>全新排版</p>
+                <p>更优雅，更舒适</p>
+            </div>
+            <div class="guobanxia">
+                <p>多联系，不孤单</p>
+                <p><span style="color: #e63468">走秀</span>与你相伴</p>
+            </div>
+
+        </div>
+        <div class="swiper-slide two">
+            <img src="img/25.jpg" alt="">
+
+        </div>
+        <div class="swiper-slide third">
+           <span class="" swiper-animate-effect="hinge" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+               走秀网商品
+           </span>
+            <img src="img/23.jpg" class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            <img src="img/24.jpg" class="ani" swiper-animate-effect="rubberBand" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+
+        </div>
+        <div class="swiper-slide four">
+            <img src="img/22.jpg" class="dond">
+            <span class="ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                NOW,开始走秀购物之旅吧..
+            </span>
+              <div class="fourdian">
+                  <a href="index.html">开始体验</a>
+              </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+    $('.conter').on('singleTap',function(){
+        $('.conter').css({display:'none'});
+        $(".swiper-container").css({display:'block'});
+    })
+
+</script>
+
+</body>
+</html>
